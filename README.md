@@ -90,3 +90,5 @@ List<CarOffer> results = searcher.filter(cars, searchSettings);
 
 System powinien umożliwiać dynamiczne i elastyczne filtrowanie listy ogłoszeń, w oparciu o wybrane przez użytkownika kryteria, w sposób zgodny z zasadami programowania obiektowego i stosowaniem interfejsów.
 
+
+![Diagram strategii](./images/lab08.png)
