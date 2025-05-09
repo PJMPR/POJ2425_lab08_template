@@ -18,7 +18,7 @@ Oddzielenie algorytmu od obiektu, który z niego korzysta. Dzięki temu możemy 
 
 #### 🧪 Przykład:
 
-![Diagram strategii](./payment.png)
+![Diagram strategii](./images/payment.png)
 
 ```java
 public interface PaymentStrategy {
@@ -84,7 +84,7 @@ Oddzielenie logiki filtrowania danych od kolekcji, które są filtrowane.
 
 #### 🧪 Przykład:
 
-![Diagram filtru](./products.png)
+![Diagram filtru](./images/products.png)
 
 ```java
 public class Product {
