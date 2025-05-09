@@ -16,24 +16,15 @@ public class MainProgram {
     public static void main(String[] args){
 
         /**
-         * Utwórz klase SearchSettings,
-         * która będzie przetrzymywać kryteria wyszukiwania ogłoszeń
-         * z odpowiednimi getterami i setterami dla pól:
-         * rocznik: od - do
-         * przebieg: od - do
-         * cena: od - do
-         * słowo w tytule
-         * data ogłoszenia: od - do
+         * Zadanie 1:
+         * Utwórz klasę SearchSettings przechowującą kryteria wyszukiwania ogłoszeń:
+         * - rocznik: od - do
+         * - przebieg: od - do
+         * - cena: od - do
+         * - słowo w tytule
+         * - data dodania ogłoszenia: od - do
          */
 //        SearchSettings searchSettings = new SearchSettings();
-
-        /**
-         * np. szukamy ogłoszeń samochodów z ostatnich 10 dni,
-         * którysh przebieg nie jest wiekszy niz 200000 km
-         * cena mieści się w granica 10-16 tyś zł
-         * posiada słowo Sprzedam w tytule
-         * a i rocznik samochodu nie może być przed rokiem 2000
-         */
 //        searchSettings.setDateFrom(LocalDate.now().minusDays(10));
 //        searchSettings.setMilleageTo(200000);
 //        searchSettings.setPriceFrom(10000.0);
@@ -42,129 +33,132 @@ public class MainProgram {
 //        searchSettings.setYearFrom(2000);
 
         /**
-         * Utwórz klasę SearchByYearFilter,
-         * która będzie filtrować liste po roczniku auta
+         * Zadanie 2: Filtrowanie po roczniku
          */
-
-//        SearchByYearFilter yearFilter = new SearchByYearFilter();
-
-        /**
-         * Tej klasie przekazemy obiekt z kreteriami wyszukiwania,
-         * oraz listę ogłoszen samochodowych
-         */
-
+//        Filter yearFilter = new SearchByYearFilter();
 //        yearFilter.setCarOffers(cars);
 //        yearFilter.setSearchSettings(searchSettings);
-
-        /**
-         * dodaj metody:
-         * canFilter - ma zbadać, czy w settingsach do wyszukiwania są ustawione ramy dla rocznika
-         * filter - ma zwrócić nową listę ogłoszeń spełniających kryteria
-         */
-
 //        if(yearFilter.canFilter()){
 //            List<CarOffer> filteredByYearCarsOffers = yearFilter.filter();
-//            if(filteredByYearCarsOffers.size()>4)
-//            {
-//                System.out.println("filtrowanie po roczniku nie działa poprawnie");
+//            printOffers(filteredByYearCarsOffers);
+//            if(filteredByYearCarsOffers.size() > 4){
+//                System.out.println("❌ [BŁĄD] Filtrowanie po roczniku nie działa poprawnie - oczekiwano maksymalnie 4 wyników");
 //                return;
+//            } else {
+//                System.out.println("✅ [OK] Filtrowanie po roczniku działa poprawnie");
 //            }
 //        }
 
         /**
-         * Utwórz pozostałe klasy obiektów, które będę służyły do filtrowania kolekcji:
-         *  - SearchByPriceFilter
-         *  - SearchByWordFilter
-         *  - SearchByMillageFilter
-         *  - SearchByDateFilter
-         *
-         * Utwórz interface o nazwie 'Filter' oraz zadeklaruj go w definicji klas odpowiadających za filtrowanie kolekcji
-         * Interface ma być wyciągniety z klasy 'SearchByYearFilter' 
-         * tzn. mają być w nim zadeklarowane wszystkie publiczne metody z klasy 'SearchByYearFilter':
-         *  - setCarOffers, 
-         *  - setSearchSettings, 
-         *  - canFilter, 
-         *  - filter
+         * Zadanie 3: Filtrowanie po cenie
          */
-
 //        Filter priceFilter = new SearchByPriceFilter();
-//        Filter wordFilter = new SearchByWordFilter();
-//        Filter milleageFilter = new SearchByMillageFilter();
-//        Filter dateFilter = new SearchByDateFilter();
-
-        /**
-         * tak jak przy filtrze z rocznikiem wypełnij te obiekty danymi wyszukiwania i kolekcją ogłoszeń do przefiltrowania
-         */
-
 //        priceFilter.setCarOffers(cars);
 //        priceFilter.setSearchSettings(searchSettings);
-//
 //        if(priceFilter.canFilter()){
 //            List<CarOffer> filteredCarsOffers = priceFilter.filter();
-//            if(filteredCarsOffers.size()>3)
-//            {
-//                System.out.println("filtrowanie po cenie nie działa poprawnie");
+//            printOffers(filteredCarsOffers);
+//            if(filteredCarsOffers.size() > 3){
+//                System.out.println("❌ [BŁĄD] Filtrowanie po cenie nie działa poprawnie - oczekiwano maksymalnie 3 wyników");
 //                return;
+//            } else {
+//                System.out.println("✅ [OK] Filtrowanie po cenie działa poprawnie");
 //            }
 //        }
 
+        /**
+         * Zadanie 3: Filtrowanie po słowie kluczowym
+         */
+//        Filter wordFilter = new SearchByWordFilter();
 //        wordFilter.setCarOffers(cars);
 //        wordFilter.setSearchSettings(searchSettings);
-
 //        if(wordFilter.canFilter()){
 //            List<CarOffer> filteredCarsOffers = wordFilter.filter();
-//            if(filteredCarsOffers.size()>4)
-//            {
-//                System.out.println("filtrowanie po słowie nie działa poprawnie");
+//            printOffers(filteredCarsOffers);
+//            if(filteredCarsOffers.size() > 4){
+//                System.out.println("❌ [BŁĄD] Filtrowanie po słowie kluczowym nie działa poprawnie - oczekiwano maksymalnie 4 wyników");
 //                return;
+//            } else {
+//                System.out.println("✅ [OK] Filtrowanie po słowie kluczowym działa poprawnie");
 //            }
 //        }
 
-//
+        /**
+         * Zadanie 3: Filtrowanie po przebiegu
+         */
+//        Filter milleageFilter = new SearchByMillageFilter();
 //        milleageFilter.setCarOffers(cars);
 //        milleageFilter.setSearchSettings(searchSettings);
 //        if(milleageFilter.canFilter()){
 //            List<CarOffer> filteredCarsOffers = milleageFilter.filter();
-//            if(filteredCarsOffers.size()>3)
-//            {
-//                System.out.println("filtrowanie po słowie nie działa poprawnie");
+//            printOffers(filteredCarsOffers);
+//            if(filteredCarsOffers.size() > 3){
+//                System.out.println("❌ [BŁĄD] Filtrowanie po przebiegu nie działa poprawnie - oczekiwano maksymalnie 3 wyników");
 //                return;
+//            } else {
+//                System.out.println("✅ [OK] Filtrowanie po przebiegu działa poprawnie");
 //            }
 //        }
+
+        /**
+         * Zadanie 3: Filtrowanie po dacie dodania
+         */
+//        Filter dateFilter = new SearchByDateFilter();
 //        dateFilter.setCarOffers(cars);
 //        dateFilter.setSearchSettings(searchSettings);
 //        if(dateFilter.canFilter()){
 //            List<CarOffer> filteredCarsOffers = dateFilter.filter();
-//            if(filteredCarsOffers.size()>4)
-//            {
-//                System.out.println("filtrowanie po dacie nie działa poprawnie");
+//            printOffers(filteredCarsOffers);
+//            if(filteredCarsOffers.size() > 4){
+//                System.out.println("❌ [BŁĄD] Filtrowanie po dacie nie działa poprawnie - oczekiwano maksymalnie 4 wyników");
 //                return;
+//            } else {
+//                System.out.println("✅ [OK] Filtrowanie po dacie działa poprawnie");
 //            }
 //        }
 
         /**
-         * Utwórz nową klasę Searcher, która będzie zbierać wszystkie filtry w sobiei wykonywać
-         * filtrowanie po wszystkich polach
+         * Zadanie 4: Filtrowanie zbiorcze z użyciem klasy Searcher
          */
-
 //        Searcher searcher = new Searcher();
-
-        /**
-         * tutaj należy tak zrobić aby metoda addFilter była zadeklarowana tylko raz w klasie
-         * oraz aby moglą przyjmować rózne rodzaje filtrów w parametrze.
-         * Wykorzystaj interfejsy
-         */
 //        searcher.addFilter(wordFilter);
 //        searcher.addFilter(priceFilter);
 //        searcher.addFilter(milleageFilter);
 //        searcher.addFilter(dateFilter);
 
 //        List<CarOffer> filteredCarsOffers = searcher.filter(cars, searchSettings);
-//
-//        if(filteredCarsOffers.size()!=1){
-//            System.out.println("filtrowanie nie działa");
+//        printOffers(filteredCarsOffers);
+
+//        if(filteredCarsOffers.size() != 1){
+//            System.out.println("❌ [BŁĄD] Filtrowanie zbiorcze nie działa poprawnie - oczekiwano dokładnie 1 wyniku");
+//        } else {
+//            System.out.println("✅ [OK] Filtrowanie zbiorcze działa poprawnie");
 //        }
-//
-//        System.out.println("Koniec");
+
+//        System.out.println("🏁 Koniec testów");
+    }
+
+    /**
+     * Pomocnicza metoda do wyświetlania listy ogłoszeń w czytelnej formie.
+     * @param offers lista ogłoszeń do wyświetlenia
+     */
+    public static void printOffers(List<CarOffer> offers) {
+        if (offers == null || offers.isEmpty()) {
+            System.out.println("Brak pasujących ogłoszeń.");
+            return;
+        }
+
+        System.out.println("\n--- Lista ogłoszeń ---");
+        for (CarOffer offer : offers) {
+            System.out.printf("Tytuł: %s | Cena: %.2f zł | Rocznik: %d | Przebieg: %d km | Data: %s\n",
+                    offer.getTitle(),
+                    offer.getPrice(),
+                    offer.getYear(),
+                    offer.getMilleage(),
+                    offer.getDate().toString()
+            );
+        }
+        System.out.println("-----------------------\n");
     }
 }
+
